@@ -1,0 +1,60 @@
+{
+  "code": 1,
+  "message": "success",
+  "data": [
+      {
+        "name": "地方性法规审查",
+        "value": 36,
+        "tagText": "2020年",
+        "data": [
+          {
+            "name": "已完成",
+            "value": 18
+          },
+          {
+            "name": "延缓",
+            "value": 10
+          },
+          {
+            "name": "其他",
+            "value": 8
+          }
+        ]
+      },
+      {
+        "name": "政府规章审查",
+        "value": 3609,
+        "tagText": "2020年",
+        "data": [
+          {
+            "name": "已完成",
+            "value": 18
+          },
+          {
+            "name": "延缓",
+            "value": 10
+          },
+          {
+            "name": "其他",
+            "value": 8
+          }
+        ]
+      },
+      {
+        "name": "规范性文件",
+        "value": 36,
+        "tagText": "本月新增12",
+        "data": [
+          {
+            "name": "已公示",
+            "value": 18
+          },
+          {
+            "name": "已审查",
+            "value": 10
+          }
+        ]
+      }
+  ],
+  "timestamp": 1600075805549
+}

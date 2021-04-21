@@ -1,0 +1,72 @@
+{
+  "code": 1,
+  "message": "success",
+  "data": [
+      {
+        "name": "法律咨询人次累计",
+        "value": 36,
+        "tagText": "本日新增5",
+        "data": [
+          {
+            "name": "网络咨询累计",
+            "value": 18,
+            "tagText": "本日新增5"
+          },
+          {
+            "name": "语音咨询累计",
+            "value": 10,
+            "tagText": "本日新增5"
+          }
+        ]
+      },
+      {
+        "name": "公证服务累计",
+        "value": 3609,
+        "tagText": "2020年",
+        "data": [
+          {
+            "name": "公证处数量(个)",
+            "value": 18
+          },
+          {
+            "name": "公证费收入(万元)",
+            "value": 10
+          }
+        ]
+      },
+      {
+        "name": "法律援助累计",
+        "value": 36,
+        "tagText": "本月新增12",
+        "data": [
+          {
+            "name": "在岗人数",
+            "value": 18
+          }
+        ]
+      },
+      {
+        "name": "人民调解案件累计",
+        "value": 36,
+        "tagText": "本月新增12",
+        "data": [
+          {
+            "name": "办结案件累计",
+            "value": 18,
+            "tagText": "本日新增5"
+          },
+          {
+            "name": "待处理累计",
+            "value": 10,
+            "tagText": "本日新增5"
+          },
+          {
+            "name": "调解成功率",
+            "value": "95%",
+            "tagText": "本日新增5"
+          }
+        ]
+      }
+  ],
+  "timestamp": 1600075805549
+}

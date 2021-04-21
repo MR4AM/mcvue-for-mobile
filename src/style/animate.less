@@ -1,0 +1,61 @@
+/*
+  大屏数据化展示动画css3 less特效库
+  vue transition 内置组件对于切换过渡的理解和定义
+  v-enter：定义进入过渡的开始状态。在元素被插入之前生效，在元素被插入之后的下一帧移除。
+  v-enter-active：定义进入过渡生效时的状态。在整个进入过渡的阶段中应用，在元素被插入之前生效，在过渡/动画完成之后移除。这个类可以被用来定义进入过渡的过程时间，延迟和曲线函数。
+  v-enter-to: 2.1.8版及以上 定义进入过渡的结束状态。在元素被插入之后下一帧生效 (与此同时 v-enter 被移除)，在过渡/动画完成之后移除。
+  v-leave: 定义离开过渡的开始状态。在离开过渡被触发时立刻生效，下一帧被移除。
+  v-leave-active：定义离开过渡生效时的状态。在整个离开过渡的阶段中应用，在离开过渡被触发时立刻生效，在过渡/动画完成之后移除。这个类可以被用来定义离开过渡的过程时间，延迟和曲线函数。
+  v-leave-to: 2.1.8版及以上 定义离开过渡的结束状态。在离开过渡被触发之后下一帧生效 (与此同时 v-leave 被删除)，在过渡/动画完成之后移除。
+*/
+.jasonFade(){
+  .my-enter-active {
+    transition: all 0.9s cubic-bezier(1, 0.5, 0.8, 1);
+    // transition: all 0.9s;
+  }
+  .my-leave-active {
+    transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+    // transition: all 0.8s;
+  }
+  .my-enter,
+  .my-leave-to {
+    // transform: translateX(0px);
+    opacity: 0;
+  }
+}
+@keyframes float {
+  from {
+    margin-top: 10px;
+  }
+  to {
+    margin-top: 0px;
+  }
+}
+@keyframes glow {
+  0% {
+      // border-color: #393;
+      box-shadow: 0 0 5px #2196F3, inset 0 0 5px rgba(241, 207, 11, 0.1), 0 1px 0 #f3df0a;
+  }
+  100% {
+      // border-color: #6f6;
+      box-shadow: 0 0 40px #f3db09, inset 0 0 10px rgba(0, 255, 0, 0.4), 0 1px 0 #FFC107;
+  }
+}
+@keyframes glow1 {
+  0% {
+      // border-color: #393;
+      box-shadow: 0 0 5px #2196F3, inset 0 0 5px rgba(241, 207, 11, 0.1), 0 1px 0 #009688;
+  }
+  100% {
+      // border-color: #6f6;
+      box-shadow: 0 0 40px #009688, inset 0 0 10px rgba(0, 255, 0, 0.4), 0 1px 0 #009688;
+  }
+}
+// @keyframes float {
+//   from {
+//     transform: translate(0, 0);
+//   }
+//   to {
+//     transform: translate(0, 20px);
+//   }
+// }

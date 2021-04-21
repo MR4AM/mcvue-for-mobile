@@ -1,0 +1,31 @@
+{
+  "code": 1,
+  "message": "success",
+  "data": [
+    {
+      "name": "普法动态数量",
+      "value": 1671,
+      "tagText": "2020年",
+      "data": []
+    },
+    {
+      "name": "活动数量",
+      "value": 1671,
+      "tagText": "2020年",
+      "data": []
+    },
+    {
+      "name": "以案释法案件库数量",
+      "value": 36,
+      "tagText": "2020年",
+      "data": []
+    },
+    {
+      "name": "法制文化作品库数量",
+      "value": 36,
+      "tagText": "2020年",
+      "data": []
+    }
+  ],
+  "timestamp": 1600075805549
+}

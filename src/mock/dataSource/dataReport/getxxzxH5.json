@@ -1,0 +1,51 @@
+{
+  "code": 1,
+  "message": "success",
+  "data": [
+      {
+        "name": "社区矫正对象",
+        "value": 36,
+        "tagText": "本日新增5",
+        "data": [
+          {
+            "name": "本日报到",
+            "value": 18
+          },
+          {
+            "name": "正常轨迹",
+            "value": 10
+          },
+          {
+            "name": "异常轨迹",
+            "value": 8
+          }
+        ]
+      },
+      {
+        "name": "戒毒人员",
+        "value": 3609,
+        "tagText": "本日新增5",
+        "data": []
+      },
+      {
+        "name": "安置帮教对象",
+        "value": 36,
+        "tagText": "本月新增12",
+        "data": [
+          {
+            "name": "已安置",
+            "value": 18
+          },
+          {
+            "name": "未安置",
+            "value": 10
+          },
+          {
+            "name": "未衔接",
+            "value": 10
+          }
+        ]
+      }
+  ],
+  "timestamp": 1600075805549
+}

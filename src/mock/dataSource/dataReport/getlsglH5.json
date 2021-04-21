@@ -1,0 +1,45 @@
+{
+  "code": 1,
+  "message": "success",
+  "data": [
+      {
+        "name": "执业律师数量",
+        "value": 36,
+        "tagText": "2020年",
+        "data": [
+          {
+            "name": "市政府",
+            "value": 18
+          },
+          {
+            "name": "区一级",
+            "value": 10
+          },
+          {
+            "name": "镇街",
+            "value": 8
+          }
+        ]
+      },
+      {
+        "name": "律所数量",
+        "value": 3609,
+        "tagText": "2020年",
+        "data": [
+          {
+            "name": "市政府",
+            "value": 18
+          },
+          {
+            "name": "区一级",
+            "value": 10
+          },
+          {
+            "name": "镇街",
+            "value": 8
+          }
+        ]
+      }
+  ],
+  "timestamp": 1600075805549
+}
