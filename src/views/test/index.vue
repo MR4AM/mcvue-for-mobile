@@ -1,6 +1,14 @@
 <template>
   <div class="welcome">
     <h1 class="title">该系统源码由mcvue提供技术底层框架支持</h1>
+     <mc-calender
+      title="日历组件选择日期区间"
+      :minDate="new Date('2021-06-08')"
+      :maxDate="new Date('2021-12-08')"
+      @select="handleSelect"
+      mode="range"
+      rangeEndText="结束"   
+    />
   </div>
 </template>
 <script>
@@ -36,6 +44,10 @@ export default {
     showPicker() {
       this.$message.warn("909090");
       this.isVisible = !this.isVisible;
+    },
+    handleSelect(e) {
+      console.log(e)
+      this.$toast("111")
     }
   }
 };

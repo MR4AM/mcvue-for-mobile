@@ -2,11 +2,12 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
-import Config from "./config/index";
+import Config from "../config/index";
 const {
   DefaultConfig: { consoleDebug }
 } = Config;
 import "./plugins/vant";
+import "./plugins/mcui";
 import "lib-flexible/flexible.js";
 import F2 from "@antv/f2";
 import VConsole from "vconsole";

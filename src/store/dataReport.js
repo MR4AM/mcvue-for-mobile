@@ -5,8 +5,11 @@
 import request from "@/api/request";
 import Api from "../api/api";
 import Utils from "../utils/utils";
-import DefaultSettings from "../defaultSettings";
-if (DefaultSettings.mock) {
+import Config from "../../config/index";
+const {
+  DefaultConfig: { mock }
+} = Config;
+if (mock) {
   require("../mock/mock"); //本地mock开启时要引入这个mock
 }
 
@@ -38,7 +41,7 @@ const actions = {
       method: "POST",
       params: params && params
     });
-    if (DefaultSettings.mock) {
+    if (mock) {
       data = Utils.mockSpec(data)
     };
     commit("setData", {
@@ -62,7 +65,7 @@ const actions = {
       method: "POST",
       params: params && params
     });
-    if (DefaultSettings.mock) {
+    if (mock) {
       data = Utils.mockSpec(data)
     };
     commit("setData", {
@@ -86,7 +89,7 @@ const actions = {
       method: "POST",
       params: params && params
     });
-    if (DefaultSettings.mock) {
+    if (mock) {
       data = Utils.mockSpec(data)
     };
     commit("setData", {
@@ -110,7 +113,7 @@ const actions = {
       method: "POST",
       params: params && params
     });
-    if (DefaultSettings.mock) {
+    if (mock) {
       data = Utils.mockSpec(data)
     };
     commit("setData", {
@@ -134,7 +137,7 @@ const actions = {
       method: "POST",
       params: params && params
     });
-    if (DefaultSettings.mock) {
+    if (mock) {
       data = Utils.mockSpec(data)
     };
     commit("setData", {
@@ -158,7 +161,7 @@ const actions = {
       method: "POST",
       params: params && params
     });
-    if (DefaultSettings.mock) {
+    if (mock) {
       data = Utils.mockSpec(data)
     };
     commit("setData", {
@@ -182,7 +185,7 @@ const actions = {
       method: "POST",
       params: params && params
     });
-    if (DefaultSettings.mock) {
+    if (mock) {
       data = Utils.mockSpec(data)
     };
     commit("setData", {
@@ -206,7 +209,7 @@ const actions = {
       method: "POST",
       params: params && params
     });
-    if (DefaultSettings.mock) {
+    if (mock) {
       data = Utils.mockSpec(data)
     };
     commit("setData", {

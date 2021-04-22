@@ -11,8 +11,11 @@ import Utils from "../utils/utils";
 // import bus from "../utils/bus";
 import videoLearning from "./videoLearning";
 import dataReport from "./dataReport";
-import DefaultSettings from "../defaultSettings";
-if (DefaultSettings.mock) {
+import Config from "../../config/index";
+const {
+  DefaultConfig: { mock }
+} = Config;
+if (mock) {
   require("../mock/mock"); //本地mock开启时要引入这个mock
 }
 
@@ -57,7 +60,7 @@ export default new Vuex.Store({
         method: "get",
         params: params && params
       })
-      if (DefaultSettings.mock) {
+      if (mock) {
         data = Utils.mockSpec(data)
       };
       commit("setData", {
@@ -81,7 +84,7 @@ export default new Vuex.Store({
         method: "post",
         params: params && params
       })
-      if (DefaultSettings.mock) {
+      if (mock) {
         data = Utils.mockSpec(data)
       };
       commit("setData", {
@@ -105,7 +108,7 @@ export default new Vuex.Store({
         method: "post",
         data: params && params
       })
-      if (DefaultSettings.mock) {
+      if (mock) {
         data = Utils.mockSpec(data)
       };
       commit("setData", {
@@ -129,7 +132,7 @@ export default new Vuex.Store({
         method: "get",
         params: params && params
       })
-      if (DefaultSettings.mock) {
+      if (mock) {
         data = Utils.mockSpec(data)
       };
       commit("setData", {
@@ -153,7 +156,7 @@ export default new Vuex.Store({
         method: "post",
         data: params && params
       })
-      if (DefaultSettings.mock) {
+      if (mock) {
         data = Utils.mockSpec(data)
       };
       commit("setData", {
@@ -177,7 +180,7 @@ export default new Vuex.Store({
         method: "post",
         data: params && params
       })
-      if (DefaultSettings.mock) {
+      if (mock) {
         data = Utils.mockSpec(data)
       };
       commit("setData", {
@@ -201,7 +204,7 @@ export default new Vuex.Store({
         method: "get",
         params: params && params
       })
-      if (DefaultSettings.mock) {
+      if (mock) {
         data = Utils.mockSpec(data)
       };
       commit("setData", {
@@ -225,7 +228,7 @@ export default new Vuex.Store({
         method: "post",
         data: params && params
       })
-      if (DefaultSettings.mock) {
+      if (mock) {
         data = Utils.mockSpec(data)
       };
       commit("setData", {
@@ -249,7 +252,7 @@ export default new Vuex.Store({
         method: "get",
         params: params && params
       })
-      if (DefaultSettings.mock) {
+      if (mock) {
         data = Utils.mockSpec(data)
       };
       commit("setData", {
@@ -273,7 +276,7 @@ export default new Vuex.Store({
         method: "post",
         data: params && params
       })
-      if (DefaultSettings.mock) {
+      if (mock) {
         data = Utils.mockSpec(data)
       };
       commit("setData", {
@@ -297,7 +300,7 @@ export default new Vuex.Store({
         method: "post",
         data: params && params
       })
-      if (DefaultSettings.mock) {
+      if (mock) {
         data = Utils.mockSpec(data)
       };
       commit("setData", {
@@ -314,7 +317,7 @@ export default new Vuex.Store({
         method: "post",
         data: params && params
       })
-      if (DefaultSettings.mock) {
+      if (mock) {
         data = Utils.mockSpec(data)
       };
       commit("setData", {
@@ -338,7 +341,7 @@ export default new Vuex.Store({
         method: "get",
         data: params && params
       })
-      if (DefaultSettings.mock) {
+      if (mock) {
         data = Utils.mockSpec(data)
       };
       commit("setData", {
@@ -362,7 +365,7 @@ export default new Vuex.Store({
         method: "post",
         data: params && params
       })
-      if (DefaultSettings.mock) {
+      if (mock) {
         data = Utils.mockSpec(data)
       };
       commit("setData", {

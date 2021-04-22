@@ -53,7 +53,7 @@
 <script>
 import Tool from './utils.js'
 export default {
-  name: 'calender',
+  name: 'mc-calender',
   props: {
     title: {
       type: String,
@@ -73,6 +73,10 @@ export default {
     mode: {
       type: String,
       default: 'single'
+    },
+    themeColor: {
+      type: String,
+      default: '#274efc'
     },
     rangeStartText: {
       type: String,

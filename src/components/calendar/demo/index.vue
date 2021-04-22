@@ -1,14 +1,14 @@
 <template>
   <div class="demo">
     <div class="demo1">
-      <mc-calender
+      <bstCalendar 
         title="日历组件选择单个日期"
         @select="handleSelect"
       />
       <p class="selectedDay">{{ selectedDay }}</p>
     </div>
     <div class="demo2">
-      <mc-calender
+      <bstCalendar 
         title="日历组件选择日期区间"
         :minDate="new Date('2021-06-08')"
         :maxDate="new Date('2021-12-08')"
@@ -32,16 +32,14 @@
   rangeEndText  <String> 区间选择结束日期的文字提醒 默认文字是结束
 */
 import Vue from 'vue'
-import Canlendar from 'moonclound'
-Vue.use(Canlendar)
+import bstCalendar from '../index.js'
+Vue.use(bstCalendar)
 export default {
   data () {
     return {
       selectedDay: '',
       selectedRange: []
     }
-  },
-  mounted () {
   },
   methods:{
     handleSelect(e) {

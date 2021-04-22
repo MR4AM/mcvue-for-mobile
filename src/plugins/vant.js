@@ -1,11 +1,7 @@
-import Vue from 'vue';
-import 'vant/lib/index.css';
+import Vue from "vue";
+import "vant/lib/index.css";
 
-import {
-  Calendar,
-  Grid,
-  GridItem
-} from 'vant';
+import { Calendar, Grid, GridItem } from "vant";
 
 Vue.use(Calendar);
 Vue.use(Grid);

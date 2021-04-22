@@ -1,19 +1,22 @@
 /*
   前后端api映射
 */
-import DefaultSettings from "../defaultSettings";
+import Config from "../../config/index";
+const {
+  DefaultConfig: { mock, env, devUrl, prodUrl, proxy, basePrefix }
+} = Config;
 let baseUrl;
-if (!DefaultSettings.mock) {
-  if (DefaultSettings.env === "dev") {
-    baseUrl = DefaultSettings.devUrl + "/module/wx";
+if (!mock) {
+  if (env === "dev") {
+    baseUrl = devUrl + basePrefix;
   } else {
-    baseUrl = DefaultSettings.prodUrl + "/module/wx";
+    baseUrl = prodUrl + basePrefix;
   }
-  if (!DefaultSettings.mock && DefaultSettings.proxy) {
-    baseUrl = "/module/wx";
+  if (!mock && proxy) {
+    baseUrl = basePrefix;
   }
 } else {
-  baseUrl = "/module/wx";
+  baseUrl = basePrefix;
 }
 export default {
   checkUser: `${baseUrl}/checkUser`, // 校验是否有菜单权限
@@ -26,8 +29,8 @@ export default {
   insertRelatedMeeting: `${baseUrl}/insertRelatedMeeting`, // 新增设法会议
   getRelatedMeeting: `${baseUrl}/getRelatedMeeting`, // 查询设法会议详情
   updateRelatedMeeting: `${baseUrl}/updateRelatedMeeting`, // 修改设法会议
-  insertConsulDay: `${baseUrl}/insertConsulDay`,// 插入法律咨询日报
-  selectConsulDay: `${baseUrl}/selectConsulDay`,// 查询法律咨询日报
+  insertConsulDay: `${baseUrl}/insertConsulDay`, // 插入法律咨询日报
+  selectConsulDay: `${baseUrl}/selectConsulDay`, // 查询法律咨询日报
   getDeptTree: `${baseUrl}/getDeptTree`, //获取部门树
   getConsuleReport: `${baseUrl}/getConsuleReport`, // 获取法律咨询日报所有部门的统计数据
   getVideoType: `${baseUrl}/getVideoType`, // 获取在线视频学习类型tab
