@@ -1,5 +1,8 @@
-# project
+# 项目说明
 
+## 项目目录
+
+```
 mcvue-for-mobile
 ├─.DS_Store
 ├─.browserslistrc
@@ -61,6 +64,7 @@ mcvue-for-mobile
 ├─config
 |   ├─default.config.js
 |   └index.js
+```
 ## Project setup
 ```
 yarn add
