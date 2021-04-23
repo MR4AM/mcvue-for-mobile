@@ -30,8 +30,10 @@ export default {
   /*
     页面挂载
   */
-  mounted() {
-    console.log(777)
+  async mounted() {
+    // const { dispatch } = this.$store;
+    let data = await this.$store.dispatch("test/testApi");
+    console.log(data, "888");
   },
   /*
     页面摧毁
@@ -46,8 +48,8 @@ export default {
       this.isVisible = !this.isVisible;
     },
     handleSelect(e) {
-      console.log(e)
-      this.$toast("111")
+      console.log(e);
+      this.$toast("111");
     }
   }
 };

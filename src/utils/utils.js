@@ -117,7 +117,7 @@ export default {
   //mock特殊数据处理
   mockSpec(data) {
     let temp;
-    temp = data.data.data;
+    temp = data?.data;
     return temp;
   },
   //根据数据生成数据并完成补零操作

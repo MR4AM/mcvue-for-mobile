@@ -21,7 +21,9 @@ export default {
   /*
     页面挂载
   */
-  mounted() {},
+  mounted() {
+    console.log(process.env, "查看环境变量")
+  },
   /*
     页面摧毁
   */

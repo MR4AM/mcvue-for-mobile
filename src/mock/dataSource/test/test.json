@@ -1,0 +1,10 @@
+{
+  "code": 0,
+  "message": "success",
+  "data": [
+    {
+      "welcome": "欢迎使用mcvue mock json"
+    }
+  ],
+  "timestamp": 1600075805549
+}
