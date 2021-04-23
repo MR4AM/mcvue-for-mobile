@@ -4,8 +4,8 @@
 */
 import Vue from "vue";
 import Vuex from "vuex";
-import request from "@/api/request";
-import Api from "@/api/api";
+import request from "@/service/request";
+import Api from "@/service/api";
 import moment from "moment";
 // import Utils from "../utils/utils";
 // import bus from "../utils/bus";

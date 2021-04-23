@@ -2,8 +2,8 @@
   vuex 在这里执行所有异步action及同步mutation的定义及commit操作
   数据化本地状态管理
 */
-import request from "@/api/request";
-import Api from "@/api/api";
+import request from "@/service/request";
+import Api from "@/service/api";
 // import Utils from "../utils/utils";
 import Config from "../../../config/index";
 const {
