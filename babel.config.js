@@ -7,7 +7,7 @@ module.exports = {
         libraryName: "element-ui",
         styleLibraryName: "theme-chalk"
       }
-    ],
+    ]
     // [
     //   "@nutui/babel-plugin-separate-import",
     //   {

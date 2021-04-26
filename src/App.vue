@@ -22,7 +22,7 @@ export default {
     页面挂载
   */
   mounted() {
-    console.log(process.env, "查看环境变量")
+    console.log(process.env, "查看环境变量");
   },
   /*
     页面摧毁

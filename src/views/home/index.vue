@@ -1,27 +1,102 @@
 <template>
   <div class="welcome">
     <h1 class="title">欢迎使用mcvue</h1>
-    <div class="paper-dec">
-      <h2>mcvue 基于vue-cli的基础增加更多面向业务的配置处理,包含特性如下：</h2>
-      <p>1.集成了service服务、开发者可根据项目需要修改、service服务基于axios。</p>
-      <p>2.集成mock.js服务,开发者可根据需要定义数据json,与后端开发协同,支持一键式切换mock和本地代理请求不同环境的接口地址。</p>
-      <p>3.集成了移动端rem适配方案、flexible.js与postcss-pxtorem结合,前端开发者只需根据设计师设计稿定义基准值rootValue,mcvue默认根字体设置为37.5。</p>
-      <p>4.集成使用了vant和mooncloud自身封装的ui组件,使用vant是考虑到目前大多数前端开发者使用参考的比较多，开发者可根据自身需要移出或自定义合适的ui组件。</p>
-      <p>5.集成使用了移动端控制台工具vconsole,方便前端开发者定位检索输出,vconsole支持一键式切换。</p>
-      <p>6.集成使用了eslint代码格式校验。</p>
-      <p>7.集成使用了vuex全局状态管理,网络请求使用使用async/await定义在vuex中,开发者只需在对应的view调用$store对应的action。</p>
-      <p>8.集成使用了less样式预处理,前端开发者可对应嵌套式及函数式编写样式表。</p>
-    </div>
+    <van-grid :column-num="3">
+      <van-grid-item
+        v-for="(item, index) in featureList"
+        :key="index"
+        icon="photo-o"
+        :text="item.name"
+        @click="item.clickFunction()"
+      />
+    </van-grid>
+    <mc-modal
+      :visable.sync="isVisible"
+      :title="modalTitle"
+      :needSlot="modalSlot"
+      :content="modalContent"
+    >
+      <About v-if="currentComponent === 'About'" />
+      <mc-calender
+        title="日历组件选择日期区间"
+        :minDate="new Date('2021-06-08')"
+        :maxDate="new Date('2021-12-08')"
+        @select="handleSelect"
+        mode="range"
+        rangeEndText="结束"
+        v-if="currentComponent === 'mcCander'"
+      />
+    </mc-modal>
   </div>
 </template>
 <script>
+import About from "./about";
 export default {
   /*
     变量装载
   */
   data() {
     return {
-      isVisible: false
+      modalTitle: "",
+      isVisible: false,
+      currentComponent: "About",
+      modalContent: "",
+      modalSlot: false,
+      featureList: [
+        {
+          name: "关于mcvue",
+          src: "",
+          clickFunction: () => {
+            this.isVisible = true;
+            this.modalSlot = true;
+            this.modalTitle = "关于mcvue";
+            this.currentComponent = "About";
+          }
+        },
+        {
+          name: "toast组件",
+          src: "",
+          clickFunction: () => {
+            this.$toast("欢迎使用mcvue");
+          }
+        },
+        {
+          name: "modal页面自定义",
+          src: "",
+          clickFunction: () => {
+            this.modalTitle = "modal组件";
+            this.isVisible = true;
+            this.modalSlot = false;
+            this.modalContent = "欢迎使用mcvue,这是mocvue modal组件";
+          }
+        },
+        {
+          name: "modal全局使用",
+          src: "",
+          clickFunction: () => {
+            this.$modal({
+              title: "这是一个全局使用的modal",
+              content: "全局modal使用实例",
+              onOk: () => {
+                this.$toast("点击了确认");
+              },
+              onCancel: () => {
+                this.$toast("点击了取消");
+              }
+            });
+          }
+        },
+        {
+          name: "日历组件",
+          src: "",
+          clickFunction: () => {
+            this.isVisible = true;
+            this.modalSlot = true;
+            this.modalTitle = "选择日期";
+            this.currentComponent = "mcCander";
+          }
+        }
+      ]
     };
   },
   /*
@@ -29,6 +104,7 @@ export default {
   */
   components: {
     // BstCanlendar
+    About
   },
   /*
     页面挂载
@@ -58,7 +134,7 @@ export default {
 </script>
 <style scoped lang="less">
 .welcome {
-  padding: 20px 30px;
+  padding: 10px;
   .title {
     font-size: 20px;
     color: @primary-color;

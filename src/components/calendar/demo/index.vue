@@ -1,20 +1,17 @@
 <template>
   <div class="demo">
     <div class="demo1">
-      <bstCalendar 
-        title="日历组件选择单个日期"
-        @select="handleSelect"
-      />
+      <mcCanlendar title="日历组件选择单个日期" @select="handleSelect" />
       <p class="selectedDay">{{ selectedDay }}</p>
     </div>
     <div class="demo2">
-      <bstCalendar 
+      <mcCanlendar
         title="日历组件选择日期区间"
         :minDate="new Date('2021-06-08')"
         :maxDate="new Date('2021-12-08')"
         @select="handleSelect"
         mode="range"
-        rangeEndText="结束"   
+        rangeEndText="结束"
       />
       <p class="selectedDay">{{ selectedRange }}</p>
     </div>
@@ -31,26 +28,26 @@
   rangeStartText  <String> 区间选择开始日期的文字提醒 默认文字是开始
   rangeEndText  <String> 区间选择结束日期的文字提醒 默认文字是结束
 */
-import Vue from 'vue'
-import bstCalendar from '../index.js'
-Vue.use(bstCalendar)
+import Vue from "vue";
+import mcCanlendar from "../index";
+Vue.use(mcCanlendar);
 export default {
-  data () {
+  data() {
     return {
-      selectedDay: '',
+      selectedDay: "",
       selectedRange: []
-    }
+    };
   },
-  methods:{
+  methods: {
     handleSelect(e) {
-      if (Array.isArray(e) && e.length>=2) {
-        this.selectedRange = `当前选中的是${e[0].date}-${e[1].date}`
+      if (Array.isArray(e) && e.length >= 2) {
+        this.selectedRange = `当前选中的是${e[0].date}-${e[1].date}`;
       } else {
-        this.selectedDay = `当前选中的是${e.date}`
+        this.selectedDay = `当前选中的是${e.date}`;
       }
     }
   }
-}
+};
 </script>
 <style scoped>
 .demo {

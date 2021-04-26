@@ -23,7 +23,7 @@ service.interceptors.response.use(
     // 请求状态判断
     if (res.code * 1 !== 0) {
       Mooncloud.showToast(res.msg || "error");
-      return Promise.reject(res.msg || "error").catch(() => { });
+      return Promise.reject(res.msg || "error").catch(() => {});
     } else {
       return res.data;
     }

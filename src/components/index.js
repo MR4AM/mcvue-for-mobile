@@ -3,9 +3,11 @@
  * Date: 2021/04/13
  */
 import Calendar from "./calendar/index.vue";
+import Modal from "./modal/index.vue";
 import showToast from "./toast/index";
+import showModal from "./modal/index";
 
-const components = [Calendar];
+const components = [Calendar, Modal];
 
 const install = function(Vue) {
   if (install.installed) return;
@@ -19,5 +21,6 @@ if (typeof window !== "undefined" && window.Vue) {
 export default {
   install,
   showToast,
+  showModal,
   Calendar
 };

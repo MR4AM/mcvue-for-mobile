@@ -2,22 +2,25 @@ import bus from "./bus.js";
 export default {
   dateFormat(date, fmt) {
     let ret;
-    date = new Date(date)
+    date = new Date(date);
     const opt = {
-        "Y+": date.getFullYear().toString(),        // 年
-        "M+": (date.getMonth() + 1).toString(),     // 月
-        "D+": date.getDate().toString(),            // 日
-        "h+": date.getHours().toString(),           // 时
-        "m+": date.getMinutes().toString(),         // 分
-        "s+": date.getSeconds().toString()          // 秒
-        // 有其他格式化字符需求可以继续添加，必须转化成字符串
+      "Y+": date.getFullYear().toString(), // 年
+      "M+": (date.getMonth() + 1).toString(), // 月
+      "D+": date.getDate().toString(), // 日
+      "h+": date.getHours().toString(), // 时
+      "m+": date.getMinutes().toString(), // 分
+      "s+": date.getSeconds().toString() // 秒
+      // 有其他格式化字符需求可以继续添加，必须转化成字符串
     };
     for (let k in opt) {
-        ret = new RegExp("(" + k + ")").exec(fmt);
-        if (ret) {
-            fmt = fmt.replace(ret[1], (ret[1].length == 1) ? (opt[k]) : (opt[k].padStart(ret[1].length, "0")))
-        };
-    };
+      ret = new RegExp("(" + k + ")").exec(fmt);
+      if (ret) {
+        fmt = fmt.replace(
+          ret[1],
+          ret[1].length == 1 ? opt[k] : opt[k].padStart(ret[1].length, "0")
+        );
+      }
+    }
     return fmt;
   },
   /*
@@ -25,7 +28,7 @@ export default {
   */
   getArrayKey(array = [], type, specical) {
     if (array.length === 0) {
-      return
+      return;
     }
     let temp = [];
     let reg = /^(\d{3})\d{4}(\d{4})$/;
@@ -233,15 +236,16 @@ export default {
       bus.$emit("echartsCommonBar1Init");
     });
   },
-  getQueryVariable(variable) { //接收带参的处理
+  getQueryVariable(variable) {
+    //接收带参的处理
     var query = window.location.search.substring(1);
     var vars = query.split("&");
-    for(var i = 0; i < vars.length; i++) {
+    for (var i = 0; i < vars.length; i++) {
       var pair = vars[i].split("=");
-      if(pair[0] == variable) {
+      if (pair[0] == variable) {
         return decodeURIComponent(pair[1]);
       }
     }
-    return '';
+    return "";
   }
 };
