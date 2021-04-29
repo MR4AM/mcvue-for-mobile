@@ -23,7 +23,7 @@ function showModal(modalObject = {}) {
         onCancel: () => {
           modalObject.onOk && modalObject.onCancel();
         }
-      }
+      };
     }
   });
 

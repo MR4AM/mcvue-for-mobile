@@ -10,6 +10,9 @@ import "./plugins/vant";
 import "./plugins/mcui";
 import "lib-flexible/flexible.js";
 import F2 from "@antv/f2";
+const ScrollBar = require("@antv/f2/lib/plugin/scroll-bar");
+// 注册插件 ScrollBar
+F2.Chart.plugins.register(ScrollBar); // 这里进行全局注册，也可以给 chart 的实例注册
 import VConsole from "vconsole";
 Vue.prototype.F2 = F2;
 if (consoleDebug) {

@@ -20,6 +20,11 @@ const routes = [
         component: () => import("@/views/test/index.vue")
       }
     ]
+  },
+  {
+    path: "/chart",
+    name: "f2图表示例",
+    component: () => import("@/views/home/chartIndex.vue")
   }
 ];
 

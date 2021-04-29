@@ -95,6 +95,13 @@ export default {
             this.modalTitle = "选择日期";
             this.currentComponent = "mcCander";
           }
+        },
+        {
+          name: "移动端图表F2使用",
+          src: "",
+          clickFunction: () => {
+            this.$router.push("/chart");
+          }
         }
       ]
     };
